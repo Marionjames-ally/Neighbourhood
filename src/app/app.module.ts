@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AlertComponent } from './_components/alert.component';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { JwtInterceptor, ErrorInterceptor } from './_helpers';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { AlertComponent } from './_components/alert.component';
     AppRoutingModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
