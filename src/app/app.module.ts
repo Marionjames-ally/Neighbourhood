@@ -1,38 +1,43 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 
 import { MatSliderModule } from '@angular/material/slider';
-import { RouterModule, Routes } from '@angular/router';
-import { MatButtonModule, MatCheckboxModule, MatToolbarModule } from '@angular/material';
+import { MatButtonModule, MatCheckboxModule } from '@angular/material';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HoodComponent } from './components/hood/hood.component';
-import { AuthorityComponent } from './components/authority/authority.component';
-import { BusinessComponent } from './components/business/business.component';
-import { HealthComponent } from './components/health/health.component';
-import { NotificationsComponent } from './components/notifications/notifications.component';
-import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { HoodComponent } from './hood/hood.component';
+import { NavbarComponent } from './navbar/navbar.component';
+// import { HoodComponent } from './components/hood/hood.component';
+// import { AuthorityComponent } from './components/authority/authority.component';
+// import { BusinessComponent } from './components/business/business.component';
+// import { HealthComponent } from './components/health/health.component';
+// import { NotificationsComponent } from './components/notifications/notifications.component';
+// import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 
-const appRoutes: Routes = [
-  { path: '', component: HoodComponent },
-  { path: 'Authority', component: AuthorityComponent },
-  { path: 'Business', component: BusinessComponent },
-  { path: 'Health', component: HealthComponent },
-  { path: 'notifications', component: NotificationsComponent },
-  { path: '**', component: PageNotFoundComponent }
-];
+// const appRoutes: Routes = [
+//   { path: 'hood', component: HoodComponent },
+//   { path: 'authority', component: AuthorityComponent },
+//   { path: 'business', component: BusinessComponent },
+//   { path: 'health', component: HealthComponent },
+//   { path: 'notifications', component: NotificationsComponent },
+//   { path: '**', component: PageNotFoundComponent }
+// ];
 
 @NgModule({
   declarations: [
     AppComponent,
     HoodComponent,
-    AuthorityComponent,
-    BusinessComponent,
-    HealthComponent,
-    NotificationsComponent,
-    PageNotFoundComponent,
+    NavbarComponent,
+    // HoodComponent,
+    // AuthorityComponent,
+    // BusinessComponent,
+    // HealthComponent,
+    // NotificationsComponent,
+    // PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,7 +48,6 @@ const appRoutes: Routes = [
     MatCheckboxModule,
     MatToolbarModule,
     RouterModule,
-    Routes
   ],
   providers: [],
   bootstrap: [AppComponent]
