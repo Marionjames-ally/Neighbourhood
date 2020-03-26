@@ -7,24 +7,32 @@ import { MatButtonModule, MatCheckboxModule, MatToolbarModule } from '@angular/m
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HomeComponent } from './components/hood/home.component';
 import { HoodComponent } from './components/hood/hood.component';
 import { AuthorityComponent } from './components/authority/authority.component';
 import { BusinessComponent } from './components/business/business.component';
+import { HealthComponent } from './components/health/health.component';
+import { NotificationsComponent } from './components/notifications/notifications.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+
 
 const appRoutes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'hero/:id',      component: HeroDetailComponent },
+  { path: '', component: HoodComponent },
+  { path: 'Authority', component: AuthorityComponent },
+  { path: 'Business', component: BusinessComponent },
+  { path: 'Health', component: HealthComponent },
+  { path: 'notifications', component: NotificationsComponent },
   { path: '**', component: PageNotFoundComponent }
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
     HoodComponent,
     AuthorityComponent,
-    BusinessComponent
+    BusinessComponent,
+    HealthComponent,
+    NotificationsComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
