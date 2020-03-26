@@ -7,10 +7,11 @@ import { MatButtonModule, MatCheckboxModule, MatToolbarModule } from '@angular/m
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HomeComponent } from './components/home/home.component';
+import { HomeComponent } from './components/hood/home.component';
+import { HoodComponent } from './components/hood/hood.component';
 
 const appRoutes: Routes = [
-  { path: '', component: CrisisListComponent },
+  { path: '', component: HomeComponent },
   { path: 'hero/:id',      component: HeroDetailComponent },
   { path: '**', component: PageNotFoundComponent }
 ];
@@ -18,7 +19,8 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    HoodComponent
   ],
   imports: [
     BrowserModule,
