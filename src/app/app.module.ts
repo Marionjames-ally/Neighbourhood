@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { Component } from '@angular/core';
+import { MatCardModule } from '@angular/material/card';
 
 import { MatSliderModule } from '@angular/material/slider';
 import { MatButtonModule, MatCheckboxModule, MatToolbarModule, MatIconModule } from '@angular/material';
@@ -13,7 +15,7 @@ import { AuthorityComponent } from './authority/authority.component';
 import { BusinessComponent } from './business/business.component';
 import { HealthComponent } from './health/health.component';
 import { NotificationComponent } from './notification/notification.component';
-import { LogOutComponent } from './log-out/log-out.component';
+import { OutComponent } from './out/out.component';
 
 
 
@@ -27,13 +29,8 @@ import { LogOutComponent } from './log-out/log-out.component';
     BusinessComponent,
     HealthComponent,
     NotificationComponent,
-    LogOutComponent,
-    // HoodComponent,
-    // AuthorityComponent,
-    // BusinessComponent,
-    // HealthComponent,
-    // NotificationsComponent,
-    // PageNotFoundComponent,
+    OutComponent,
+   
   ],
   imports: [
     BrowserModule,
@@ -44,7 +41,8 @@ import { LogOutComponent } from './log-out/log-out.component';
     MatCheckboxModule,
     MatToolbarModule,
     RouterModule,
-    MatIconModule
+    MatIconModule,
+    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
