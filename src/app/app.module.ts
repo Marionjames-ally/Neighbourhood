@@ -10,6 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './components/hood/home.component';
 import { HoodComponent } from './components/hood/hood.component';
 import { AuthorityComponent } from './components/authority/authority.component';
+import { BusinessComponent } from './components/business/business.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -22,7 +23,8 @@ const appRoutes: Routes = [
     AppComponent,
     HomeComponent,
     HoodComponent,
-    AuthorityComponent
+    AuthorityComponent,
+    BusinessComponent
   ],
   imports: [
     BrowserModule,
